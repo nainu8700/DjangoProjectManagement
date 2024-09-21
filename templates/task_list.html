@@ -1,0 +1,13 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Tasks{% endblock %}
+
+{% block content %}
+<div class="flex justify-between w-full items-center py-10">
+  <h1 class="text-lg font-bold">Tasks</h1>
+  <button id="create-task" class="btn"><i class="fas fa-plus"></i> Create New Task</button>
+</div>
+    <div class="card-grid" id="task-list"></div>
+{% endblock %}

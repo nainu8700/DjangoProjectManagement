@@ -1,0 +1,29 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="w-full flex justify-center items-center h-[600px] ">
+  <div class=" w-fit flex justify-center items-center h-[500px] flex-col bg-white shadow-lg rounded-lg px-20 ">
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+        {% endfor %}
+        <div  class="w-full flex justify-center items-center ">
+          <button type="submit" class="btn mt-6 ">Register</button>
+
+        </div>
+    </form>
+    <div class="pt-4">
+      <p>Already have an account? <a href="{% url 'login' %}" class="underline text-blue-400">Login here</a></p>
+    </div>
+</div>
+</div>
+{% endblock %}

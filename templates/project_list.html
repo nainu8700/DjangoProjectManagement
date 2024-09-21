@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="flex justify-between w-full items-center py-10">
+  <h1 class="text-lg font-bold">Projects</h1>
+  <button id="create-project" class="btn"><i class="fas fa-plus"></i> Create New Project</button>
+</div>
+    <div class="card-grid" id="project-list"></div>
+{% endblock %}
